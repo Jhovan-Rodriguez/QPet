@@ -1,0 +1,58 @@
+:root {
+    --primary: #38A3A5;
+    --second: #57CC99;
+    --green-f: #80ED99;
+    --dark-blue: #22577A;
+    --dark-blue-40: rgba(var(--dark-blue), 0.4);
+    --light-green:  rgba(199, 249, 204, 0.62);
+    --page-background: var(--light-green);
+    --nav-background: linear-gradient(90deg, rgba(var(--primary), 0.7) 10.53%, rgba(var(--second), 0.7) 90.68%);
+    --menu-back: linear-gradient(90deg, var(--primary) 10.53%, var(--second) 90.68%);
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.title-primary{
+    color: white;
+}
+
+.pet-card-1{
+    height: 350px;
+    width: 250px;
+    color: #ffffff;
+}
+
+.pet-card-1 img {
+
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+}
+.item{
+    position: absolute;
+    transition: 0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: #00000063;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 550px;
+}
+#next{
+    left: unset;
+    right: 550px;
+}

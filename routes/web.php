@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('auth.login');
 });
+
+Route::get('/veterinarias', function () {
+    return view('veterinarias');
+});
+
+
+Route::get('/veterinaria', function () {
+    return view('veterinaria');
+});
+
+
+Route::get('/mascotas', function () {
+    return view('mismascotas');
+});
+

@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+.container-fluid {
+    background: rgba(199, 249, 204, 0.62);
+}
+
+.titulo-vet{
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    color: #38A3A5;
+}
+
+.tarjetas-fav-vet{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tarjeta-vet-body{
+    border-radius: 15px 15px 0px 0px;
+    background: #38A3A5;
+    text-align: center;
+    color:white;
+}
+
+.direcc-vet{
+    font-size: small;
+    text-align: left;
+    margin-top: 5px;
+}
+
+
+.form{
+    width: 50%;
+    background: #38A3A5;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+
+.form .fa-search{
+
+    position: absolute;
+    top:20px;
+    left: 20px;
+    color: #ffff;
+
+}
+
+.form span{
+
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan{
+    padding-left: 7px;
+}
+
+.left-pan i{
+   
+   padding-left: 10px;
+}
+
+.form-input{
+    color: white;
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+}
+
+.form-input::placeholder{
+    color: white;
+}
+
+.form-input:focus{
+
+    box-shadow: none;
+    border:none;
+}
+
+.dots-mas{
+    text-align: right;
+    font-size: larger;
+}
+
+.rating-wrapper {
+  align-self: center;
+  display: inline-flex;
+  direction: rtl !important;
+  margin-left: auto;
+}
+
+label {
+    color: #E1E6F6;
+    cursor: pointer;
+    display: inline-flex;
+    font-size:large;
+    padding: 1rem .6rem;
+    transition: color 0.5s;
+  }
+  
+   svg {
+     -webkit-text-fill-color: transparent;
+     -webkit-filter: drop-shadow (4px 1px 6px rgba(198, 206, 237, 1));
+     filter:drop-shadow(5px 1px 3px rgba(198, 206, 237, 1));
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+  }
+  
+  input {
+    display: none;
+  }
+
+  label:hover,
+  label:hover ~ label,
+  input:checked ~ label  {
+    color: #34AC9E;
+  }
+
+  label:hover,
+  label:hover ~ label,
+  input:checked ~ label  {
+    color: #34AC9E;
+  }
+
+
+  /* CSS PARA VETERINARIA   */
+
+  .titulo-vet{
+    font-size: x-large;
+    align-items: center;
+  }
