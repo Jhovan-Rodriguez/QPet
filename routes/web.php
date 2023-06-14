@@ -18,16 +18,16 @@ Route::get('/', function () {
 });
 
 Route::get('/veterinarias', function () {
-    return view('veterinarias');
+    return view('veterinarias.veterinarias');
 });
 
 
 Route::get('/veterinaria', function () {
-    return view('veterinaria');
+    return view('veterinarias.veterinaria');
 });
 
 
 Route::get('/mascotas', function () {
-    return view('mismascotas');
+    return view('mascotas.mismascotas');
 });
 
