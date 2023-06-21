@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+
 :root {
     --primary: #38A3A5;
     --second: #57CC99;
@@ -56,11 +58,6 @@
 #next{
     left: unset;
     right: 550px;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
-.container-fluid {
-    background: rgba(199, 249, 204, 0.62);
 }
 
 .titulo-vet{

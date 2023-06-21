@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "ChelseaMarket-Regular";
+    src: url("../fonts/chelsea_market/ChelseaMarket-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Muli-Regular";
+    src: url("../fonts/muli/Muli-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Muli-SemiBold";
+    src: url("../fonts/muli/Muli-SemiBold.ttf");
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    margin: 0;
+}
+
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+:focus {
+    outline: none;
+}
+
+.text-center a h6 {
+    color: #ffff;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+}
+
+.wrapper .image-holder {
+    width: 59.9%;
+}
+
+.wrapper .content-inner {
+    width: 40.1%;
+}
+
+
+.logo {
+    height: 160px;
+    margin-top: -30px;
+}
+
+.content-inner {
+    background: linear-gradient(135deg, #38A3A5 0%, #80ED99 100%);
+    padding-left: 4vw;
+    padding-right: 4vw;
+    color: #fff;
+}
+
+form {
+    width: 100%;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 39px;
+}
+
+.img-usuario {
+    width: 55%;
+    overflow: hidden;
+}
+
+.cont-usuario:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@media (max-width: 1500px) {
+    .form-inner {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
+
+@media (max-width: 1199px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper .image-holder {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .wrapper .form-inner {
+        width: 100%;
+        height: 55vh;
+    }
+
+    .form-inner {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    button {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapper .image-holder {
+        height: 37vh;
+    }
+
+    .wrapper .form-inner {
+        height: 63vh;
+    }
+
+    .socials {
+        margin-top: 40px;
+    }
+
+    .form-header {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper .form-inner {
+        height: auto;
+    }
+
+    .wrapper .image-holder {
+        height: auto;
+    }
+
+    .image-holder img {
+        display: block;
+    }
+
+    .form-inner {
+        padding: 30px 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+button {
+    --primary-color: #38A3A5;
+    
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  button:hover .arrow:before {
+    right: 0;
+  }
+  
+  
+  

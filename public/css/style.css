@@ -73,10 +73,10 @@ h6 {
 }
 
 .pagetitle h1 {
-  font-size: 34px;
+  font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: var(--primary);
+  color: #012970;
 }
 
 /*--------------------------------------------------------------
@@ -384,16 +384,16 @@ h6 {
 .logo span {
   font-size: 26px;
   font-weight: 700;
-  color: var(--dark-blue);
+  color: #012970;
   font-family: "Nunito", sans-serif;
 }
 
 .header {
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 1;
   height: 60px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background: var(--nav-background);
+  background: linear-gradient(90deg, rgba(56, 163, 165, 0.95) 10.53%, rgba(87, 204, 153, 0.95) 90.68%);
   padding-left: 20px;
   /* Toggle Sidebar Button */
   /* Search Bar */
@@ -403,7 +403,7 @@ h6 {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
-  color: var(--dark-blue);
+  color: #012970;
 }
 
 .header .search-bar {
@@ -480,13 +480,13 @@ h6 {
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: var(--dark-blue);
+  color: #012970;
   margin-right: 25px;
   position: relative;
 }
 
 .header-nav .nav-profile {
-  color: var(--dark-blue);
+  color: #012970;
 }
 
 .header-nav .nav-profile img {
