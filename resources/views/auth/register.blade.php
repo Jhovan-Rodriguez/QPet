@@ -39,29 +39,17 @@
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <div class="text-center cont-usuario">
-                    <a href="">
-                        <img class="img-usuario" src="{{asset('img/tipo_usuario/asociado.png')}}"  alt="...">
-                        <h6>Asociado</h6>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
+        <div class="row" style="margin-top: 20%">
             <div class="col-3"></div>
             <div class="col-6">
                     <h6 style="text-align: center">¿Ya tienes cuenta?</h6>
-                    <button>
+                    <a class="sign-in" href="{{route('login')}}">
                         Iniciar sesión
                         <div class="arrow-wrapper">
                             <div class="arrow"></div>
                     
                         </div>
-                    </button>
+                    </a>
             </div>
             <div class="col-4"></div>
         </div>

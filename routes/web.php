@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +20,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/register', function () {
-    return view('auth.register');
-});
+//Ruta para la vista login
+Route::get('/login',[LoginController::class,'index'])->name('login');
+//Ruta para la vista de registro
+Route::get('/register',[RegisterController::class,'index'])->name('register');
 
 Route::get('/veterinarias', function () {
     return view('veterinarias.veterinarias');

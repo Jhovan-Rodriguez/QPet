@@ -90,7 +90,7 @@ form {
 
 .form-header {
     text-align: center;
-    margin-bottom: 39px;
+    margin-bottom: 55px;
 }
 
 .img-usuario {
@@ -178,9 +178,8 @@ form {
     }
 }
 
-button {
+.sign-in {
     --primary-color: #38A3A5;
-    
     --secondary-color: #fff;
     --hover-color: #111;
     --arrow-width: 10px;
@@ -198,15 +197,16 @@ button {
     font-weight: bold;
     margin-top: 10px;
     margin-left: 20px;
+    width: fit-content;
   }
   
-  button .arrow-wrapper {
+  .sign-in .arrow-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  button .arrow {
+  .sign-in .arrow {
     margin-top: 1px;
     width: var(--arrow-width);
     background: var(--primary-color);
@@ -215,7 +215,7 @@ button {
     transition: 0.2s;
   }
   
-  button .arrow::before {
+  .sign-in .arrow::before {
     content: "";
     box-sizing: border-box;
     position: absolute;
@@ -229,17 +229,162 @@ button {
     transform: rotate(-45deg);
   }
   
-  button:hover {
+  .sign-in:hover {
     background-color: var(--hover-color);
   }
   
-  button:hover .arrow {
+  .sign-in:hover .arrow {
     background: var(--secondary-color);
   }
   
-  button:hover .arrow:before {
+  .sign-in:hover .arrow:before {
     right: 0;
   }
   
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    flex-direction: column;
+    gap: 35px;
+    border: none;
+    border-color: none;
+    background: none;
+  }
   
+  .inputBox,
+  .inputBox1 {
+    position: relative;
+    width: 350px;
+  }
   
+  .inputBox input,
+  .inputBox1 input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    background: transparent;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: 0.1s;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .inputBox span,
+  .inputBox1 span {
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    transform: translateY(-4px);
+    margin-left: 10px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 3px;
+    border-radius: 8px;
+  }
+  
+  .inputBox input:valid~span,
+  .inputBox input:focus~span {
+    transform: translateX(200px) translateY(-15px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #fff;
+    letter-spacing: 0.2em;
+    color: #000;
+    border: 2px;
+  }
+  
+  .inputBox1 input:valid~span,
+  .inputBox1 input:focus~span {
+    transform: translateX(156px) translateY(-15px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #000;
+    letter-spacing: 0.2em;
+    color: #fff;
+    border: 2px;
+  }
+  
+  .inputBox input:valid,
+  .inputBox input:focus,
+  .inputBox1 input:valid,
+  .inputBox1 input:focus {
+    border: 2px solid #fff;
+    border-radius: 8px;
+  }
+  
+  .enter {
+    height: 45px;
+    width: 150px;
+    border-radius: 5px;
+    border: 2px solid #ffff;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 3em;
+  }
+  
+  .enter:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 12px;
+    gap: 8px;
+    border: 1px solid #ffff;
+    height: 40px;
+    width: 201px;
+    background: transparent;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+
+  .lable {
+    line-height: 22px;
+    font-size: 17px;
+    color: #000;
+    letter-spacing: 1px;
+  }
+  
+  .button:hover {
+    background: #38A3A5;
+  }
+  
+  .button:hover .lable{
+    color: #fff;
+  }
+
+  .button:hover .svg-icon {
+    animation: slope 1s linear infinite;
+    color: #fff;
+  }
+  
+  @keyframes slope {
+    0% {
+    }
+  
+    50% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+    }
+  }
+
