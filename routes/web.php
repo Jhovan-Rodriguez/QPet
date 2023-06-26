@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PostController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -21,9 +22,8 @@ Route::get('/', function () {
 });
 
 //Ruta para el dashboard
-Route::get('/dashboard', function () {
-    return view('layouts.dashboard');
-});
+Route::get('/dashboard',[PostController::class,'index'])->name('post.index');
+
 
 //Ruta para la vista login
 Route::get('/login',[LoginController::class,'index'])->name('login');
