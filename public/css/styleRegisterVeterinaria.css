@@ -73,13 +73,13 @@ a {
 
 
 .logo {
-    height: 160px;
-    margin-top: -40px;
+  height: 160px;
+  margin-top: -40px;
 }
 
 .logoQPet{
-  width: 250px;
-  height:250px;
+width: 250px;
+height:250px;
 }
 
 .content-inner {
@@ -128,6 +128,7 @@ form {
     gap: 0.6em;
     font-weight: bold;
     margin-top: 10px;
+    margin-left: 20px;
     width: fit-content;
   }
   
@@ -187,16 +188,16 @@ form {
   .inputBox,
   .inputBox1 {
     position: relative;
-    width: 450px;
   }
   
   .inputBox input,
+  .inputBox select,
   .inputBox1 input {
     width: 100%;
     padding: 10px;
     outline: none;
     border: none;
-    color: #fff;
+    color: #000;
     font-size: 1em;
     background: transparent;
     border: 2px solid #fff;
@@ -213,8 +214,6 @@ form {
     margin-top: 5px;
     position: absolute;
     left: 0;
-    transform: translateY(-4px);
-    margin-left: 10px;
     padding: 10px;
     pointer-events: none;
     font-size: 12px;
@@ -223,11 +222,11 @@ form {
     transition: 0.5s;
     letter-spacing: 3px;
     border-radius: 8px;
-    transform: translateX(270px) translateY(-15px);
+    transform: translateX(15px) translateY(-20px);
     font-size: 0.8em;
     padding: 5px 10px;
     background: #fff;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     color: #000;
     border: 2px;
     
@@ -235,19 +234,13 @@ form {
   
   
 
-  
-  .enter:hover {
-    background-color: rgb(255, 255, 255);
-    color: black;
-  }
-
   .button {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 9px 12px;
     gap: 8px;
-    border: 1px solid #ffff;
+    border: 2px solid #ffff;
     height: 40px;
     width: 201px;
     background: transparent;
@@ -256,11 +249,6 @@ form {
     cursor: pointer;
   }
   
-.container-register{
-  display: flex;
-  justify-content: center;
-}
-
 
   .lable {
     line-height: 22px;
@@ -294,4 +282,155 @@ form {
     }
   }
 
-  
+section#step-1 .row {
+    margin-bottom: 25px;
+}
+
+.cont-siguiente{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.cont-veterinaria-options{
+    display: flex;
+    justify-content: space-around;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+ul.form-stepper {
+    counter-reset: section;
+    margin-bottom: 5%;
+}
+
+ul.form-stepper .form-stepper-circle {
+    position: relative;
+}
+
+ul.form-stepper .form-stepper-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.form-stepper-horizontal {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+ul.form-stepper>li:not(:last-of-type) {
+    margin-bottom: 0.625rem;
+    -webkit-transition: margin-bottom 0.4s;
+    -o-transition: margin-bottom 0.4s;
+    transition: margin-bottom 0.4s;
+}
+
+.form-stepper-horizontal>li:not(:last-of-type) {
+    margin-bottom: 0 !important;
+}
+
+.form-stepper-horizontal li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.form-stepper-horizontal li:not(:last-child):after {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 1px;
+    content: "";
+    top: 32%;
+}
+
+.form-stepper-horizontal li:after {
+    background-color: #dee2e6;
+}
+
+.form-stepper-horizontal li.form-stepper-completed:after {
+    background-color: #4da3ff;
+}
+
+.form-stepper-horizontal li:last-child {
+    flex: unset;
+}
+
+ul.form-stepper li a .form-stepper-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    line-height: 1.7rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 50%;
+}
+
+.form-stepper .form-stepper-active .form-stepper-circle {
+    background-color: #20c997 !important;
+    color: #fff;
+}
+
+.form-stepper .form-stepper-active .label {
+    color: #000000 !important;
+}
+
+.form-stepper .form-stepper-active .form-stepper-circle:hover {
+    background-color: #17a2b8 !important;
+    color: #fff !important;
+}
+
+.form-stepper .form-stepper-unfinished .form-stepper-circle {
+    background-color: #f8f7ff;
+}
+
+.form-stepper .form-stepper-completed .form-stepper-circle {
+    background-color: #0e9594 !important;
+    color: #fff;
+}
+
+.form-stepper .form-stepper-completed .label {
+    color: #0e9594 !important;
+}
+
+.form-stepper .form-stepper-completed .form-stepper-circle:hover {
+    background-color: #0e9594 !important;
+    color: #fff !important;
+}
+
+.form-stepper .form-stepper-active span.text-muted {
+    color: #fff !important;
+}
+
+.form-stepper .form-stepper-completed span.text-muted {
+    color: #fff !important;
+}
+
+.form-stepper .label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.form-stepper a {
+    cursor: default;
+}

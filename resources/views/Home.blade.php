@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Bootslander Bootstrap Template - Index</title>
+    <title>QPet</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
+    <link href="{{asset('img/logos/LogoQpet.png')}}" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -19,16 +19,16 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('vendor/aos/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/bootstrap-icons/bootstrap-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/boxicons/css/boxicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/glightbox/css/glightbox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/remixicon/remixicon.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/swiper/swiper-bundle.min.css')}}">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/styleHomePage.css')}}">
 
     <!-- =======================================================
   * Template Name: Bootslander
@@ -46,7 +46,7 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1><a href="index.html"><span>Bootslander</span></a></h1>
+                <h1><a href="index.html"><img src="{{asset('img/logos/QPet-Logo.png')}}" alt=""></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -59,25 +59,14 @@
                     <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li class="dropdown"><a href="#"><span>Registrate</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
+                            <li><a href="{{route('register.usuario')}}"><i class="bi bi-person-plus-fill"></i>Registro usuario</a></li>
+                            <li><a href="{{route('register.veterinario')}}"><i class="ri-hearts-fill"></i>Registro veterinaria</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="{{route('login')}}">Inicia sesión</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -92,15 +81,24 @@
             <div class="row justify-content-between">
                 <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
                     <div data-aos="zoom-out">
-                        <h1>Build Your Landing Page With <span>Bootstlander</span></h1>
-                        <h2>We are team of talented designers making websites with Bootstrap</h2>
-                        <div class="text-center text-lg-start">
-                            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                        <h1>Construye la felicidad de tu mascota con <span>QPet</span></h1>
+                        <h2>Protegiendo a tu mejor amigo de cuatro patas en cada paso del camino</h2>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="text-center text-lg-start">
+                                    <a href="{{route('register')}}" class="btn-get-started scrollto">Registrate</a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-center text-lg-start">
+                                    <a href="{{route('login')}}" class="btn-get-started scrollto">Inicia sesión</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-                    <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+                    <img src="{{asset('img/homepage/hero-img.png')}}" class="img-fluid animated" alt="">
                 </div>
             </div>
         </div>
@@ -1005,15 +1003,15 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="{{asset('vendor/purecounter/purecounter_vanilla.js')}}"></script>
+    <script src="{{asset('vendor/aos/aos.js')}}"></script>
+    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('vendor/php-email-form/validate.js')}}"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('js/mainHomePage.js')}}"></script>
 
 </body>
 

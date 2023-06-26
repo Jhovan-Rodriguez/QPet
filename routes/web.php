@@ -17,13 +17,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('Home');
+});
+
+//Ruta para el dashboard
+Route::get('/dashboard', function () {
+    return view('layouts.dashboard');
 });
 
 //Ruta para la vista login
 Route::get('/login',[LoginController::class,'index'])->name('login');
 //Ruta para la vista de registro
 Route::get('/register',[RegisterController::class,'index'])->name('register');
+//Ruta para la vista de registrar Usuarios Normales
+Route::get('/registroUsuario',[RegisterController::class,'registrarUsuario'])->name('register.usuario');
+//Ruta para la vista de registro de veterinaria
+Route::get('/registroVeterinario',[RegisterController::class,'registrarVeterinario'])->name('register.veterinario');
+
 
 Route::get('/veterinarias', function () {
     return view('veterinarias.veterinarias');
