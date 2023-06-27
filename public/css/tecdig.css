@@ -2464,7 +2464,7 @@ textarea.form-control-lg {
     .btn {
       transition: none; } }
   .btn:hover {
-    color: #6f6c6f; }
+    color: #045459; }
   .btn-check:focus + .btn, .btn:focus {
     outline: 0;
     box-shadow: 0 0.125rem 0.25rem 0rem rgba(74, 49, 68, 0.15); }
@@ -9915,7 +9915,7 @@ textarea.form-control-lg {
     .btn {
       transition: none; } }
   .btn:hover {
-    color: #6f6c6f;
+    color: #04565a;
     transition: all 300ms ease-in-out; }
   .btn-check:focus + .btn, .btn:focus {
     outline: 0;
@@ -9940,11 +9940,11 @@ textarea.form-control-lg {
   box-shadow: 0 0.125rem 0.25rem rgba(74, 49, 68, 0.3); }
   .btn-primary:hover {
     color: #fff;
-    background-color: #3f2a3a;
+    background-color: #00c4a7;
     border-color: #3b2736; }
   .btn-check:focus + .btn-primary, .btn-primary:focus {
     color: #fff;
-    background-color: #3f2a3a;
+    background-color: #00c4a7;
     border-color: #3b2736;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0 0 0rem rgba(101, 80, 96, 0.5); }
   .btn-check:checked + .btn-primary,

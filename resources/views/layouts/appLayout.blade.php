@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="{{asset('img/logos/LogoQpet.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{asset('css/libs.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/tecdig.css')}}">
+    @yield('estilos')
 </head>
 
 <body class="  ">

@@ -1,0 +1,57 @@
+.banner{
+    width: 75%;
+}
+
+.container-banner{
+    display: flex;
+    justify-content:center ;
+}
+
+.mis-mascotas{
+    background-color: #7F5539;
+    color: #fff;
+}
+
+.mis-mascotas h2{
+    color: #fff;
+}
+
+.veterinaria{
+    background-color: #049291;
+}
+
+.veterinaria h2{
+    color: #fff;
+}
+
+.adopcion{
+    background-color: #FF6164;
+}
+
+.adopcion h2{
+    color: #fff;
+}
+
+.img-mascotas{
+    position: relative;
+    left: 7px;
+    z-index: 1;
+    top: 25px;
+}
+
+.img-veterinaria{
+    width: 85%;
+    position: relative;
+    left: 7px;
+    z-index: 1;
+    top: 25px;
+}
+
+.img-adopcion{
+    width: 250px;
+    position: relative;
+    z-index: 1;
+    right: 15px;
+    top: 25px;
+}
+
