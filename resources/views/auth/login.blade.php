@@ -22,20 +22,21 @@
                 <h2>¡Bienvenido otra vez!</h2>
             </div>
             <div class="container">
-                <form action="">
+                <form action="{{route('login')}}" method="POST" novalidate>
+                    @csrf
                     <div class="row">
                         <div class="card">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Ingrese su username">
-                                <span>Username</span>
+                                <input name="email" type="text" placeholder="Ingrese su email">
+                                <span>Email</span>
                             </div>
     
                             <div class="inputBox">
-                                <input type="password" required="required" placeholder="Ingrese su contraseña">
+                                <input name="password" type="password" placeholder="Ingrese su contraseña">
                                 <span>Contraseña</span>
                             </div>
     
-                            <button class="button">
+                            <button type="submit" class="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dog svg-icon"
                                     width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                     fill="none" stroke-linecap="round" stroke-linejoin="round">

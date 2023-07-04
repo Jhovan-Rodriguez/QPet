@@ -21,34 +21,35 @@
             <div class="form-header">
                 <h2>Crea una cuenta</h2>
             </div>
-            <form class="row g-4" style="width:auto;">
+            <form action="{{route('usuario.create')}}" method="POST" class="row g-4" style="width:auto;">
+                @csrf
                 <div class="col-md-6">
                     <div class="inputBox">
-                        <input type="text" required="required" placeholder="Username">
+                        <input name="username" type="text"  placeholder="Username">
                         <span>Username</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inputBox">
-                        <input type="text" required="required" placeholder="Nombre">
+                        <input name="nombre" type="text"  placeholder="Nombre">
                         <span>Nombre</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inputBox">
-                        <input type="text" required="required" placeholder="Apellido paterno">
+                        <input name="apellido_p" type="text"  placeholder="Apellido paterno">
                         <span>Apellido Paterno</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inputBox">
-                        <input type="text" required="required" placeholder="Apellido materno">
+                        <input name="apellido_m" type="text" placeholder="Apellido materno">
                         <span>Apellido materno</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inputBox">
-                        <select>
+                        <select name="genero">
                             <option selected>Seleccione</option>
                             <option value="1">Masculino</option>
                             <option value="2">Femenino</option>
@@ -59,24 +60,36 @@
                 </div>
                 <div class="col-md-6">
                     <div class="inputBox">
-                        <input type="date" required="required" placeholder="Apellido materno">
+                        <input name="fecha_nac" type="date" placeholder="Apellido materno">
                         <span>Fecha de nacimiento</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inputBox">
-                        <input type="tel" required="required" placeholder="Teléfono">
+                        <input name="telefono" type="tel"  placeholder="Teléfono">
                         <span>Teléfono</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="inputBox">
-                        <input type="email" required="required" placeholder="Email">
+                        <input name="email" type="email" placeholder="Email">
                         <span>Email</span>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="inputBox">
+                        <input name="password" type="password" placeholder="Contraseña">
+                        <span>Contraseña</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="inputBox">
+                        <input name="password_confirmation" type="password" placeholder="Confirma contraseña">
+                        <span>Confirma Contraseña</span>
+                    </div>
+                </div>
                 <div class="card" style="min-height: 0px">
-                    <button class="button">
+                    <button type="submit" class="button">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dog svg-icon"
                             width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                             fill="none" stroke-linecap="round" stroke-linejoin="round">
