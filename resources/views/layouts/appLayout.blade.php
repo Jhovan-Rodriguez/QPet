@@ -124,9 +124,6 @@
             <!--Nav Start-->
             <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar">
                 <div class="container-fluid navbar-inner">
-                    <a href="../dashboard/index.html" class="navbar-brand">
-                        <h4 class="logo-title">TecDig</h4>
-                    </a>
                     <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
                         <i class="icon">
                             <svg width="20px" height="20px" viewBox="0 0 24 24">
@@ -293,7 +290,7 @@
                                 <a class="nav-link py-0 d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="{{asset('img/tipo_usuario/usuario.png')}}" alt="User-Profile" class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
-                                        <h6 class="mb-0 caption-title">Usuario</h6>
+                                        <h6 class="mb-0 caption-title">{{auth()->user()->username}}</h6>
                                     </div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -305,7 +302,7 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="../dashboard/auth/sign-in.html">Logout</a></li>
+                                    <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
