@@ -38,7 +38,7 @@
                         Calle Itzamara #1234 Fraccionamiento Las Lomas
                         </p>
                         <div class="position-absolute bottom-0 end-0 mr-2" style="padding-right:20px;">
-                        <a href="#" class="text-end card-link text-truncate" >...</a>
+                        <a href="{{ route('miVet') }}" class="text-end card-link text-truncate" >...</a>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                         Calle Itzamara #1234 Fraccionamiento Las Lomas
                         </p>
                         <div class="position-absolute bottom-0 end-0 mr-2" style="padding-right:20px;">
-                        <a href="#" class="text-end card-link text-truncate" >...</a>
+                        <a href="{{ route('miVet') }}" class="text-end card-link text-truncate" >...</a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         Calle Itzamara #1234 Fraccionamiento Las Lomas
                         </p>
                         <div class="position-absolute bottom-0 end-0 mr-2" style="padding-right:20px;">
-                        <a href="#" class="text-end card-link text-truncate" >...</a>
+                        <a href="{{ route('miVet') }}" class="text-end card-link text-truncate" >...</a>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@
             <div class="row titulo-vet">
                 <!-- return button -->
                 <div class="col-1">
-                    <a href="#" >
+                    <a href="{{ route('vet') }}" >
                         <i class="fas fa-chevron-left"></i>
                     </a>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="col-1"></div>
                 <div class="col-3">
                     <div class="position-relative tarjeta-vet">
-                        <img src="{{ asset('img/imagen.png') }}" class="card-img-top rounded-0"
+                        <img src="{{asset('img/vet/vet2.jpg')}}" class="card-img-top rounded-0"
                             alt="...">
                     </div>
                     <!-- star rating -->

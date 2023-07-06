@@ -1,9 +1,11 @@
 <?php
 
+
+
+use App\Http\Controllers\MascotaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
-
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 
@@ -22,9 +24,6 @@ Route::get('/', function () {
     return view('Home');
 });
 
-Route::get('/misMascostas', function () {
-    return view('mascotas.mismascotas');
-})->name('misMascotas');
 
 Route::get('/veterinarias', function () {
     return view('veterinarias.veterinarias');
@@ -68,3 +67,7 @@ Route::post('/registrarUsuario',[RegisterController::class,'create'])->name('usu
 
 //Ruta para la vista de registro de veterinaria
 Route::get('/registroVeterinario',[RegisterController::class,'registrarVeterinario'])->name('register.veterinario');
+
+Route::get('/mascotas',[MascotaController::class,'index'])->name('mascotas.index');
+Route::get('/mascotas/create', [MascotaController::class, 'create'])->name('mascotas.create');
+Route::post('/mascotas', [MascotaController::class,'store'])->name('mascotas.store');
