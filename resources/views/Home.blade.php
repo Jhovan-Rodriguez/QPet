@@ -82,12 +82,12 @@
                         <h1>Construye la felicidad de tu mascota con <span>QPet</span></h1>
                         <h2>Protegiendo a tu mejor amigo de cuatro patas en cada paso del camino</h2>
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-3 m-2">
                                 <div class="text-center text-lg-start">
                                     <a href="{{route('register')}}" class="btn-get-started scrollto">Registrate</a>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-5 m-2">
                                 <div class="text-center text-lg-start">
                                     <a href="{{route('login')}}" class="btn-get-started scrollto">Inicia sesión</a>
                                 </div>

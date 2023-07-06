@@ -1,0 +1,79 @@
+/*Estilos estrellas */
+.star-rating {
+    display: none;
+    
+}
+.rating-wrapper {
+    text-align: center; /* Centrar las estrellas */
+}
+
+.star-rating + label {
+    font-size: 0;
+}
+
+.star-rating + label:before {
+    content: '\2605'; /* Código unicode de estrella */
+    margin: 2px;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.star-rating:checked + label:before,
+.star-rating:hover + label:before,
+.star-rating:focus + label:before {
+    color: gold;
+}
+
+.star-rating:checked + label:before,
+.star-rating:checked ~ .star-rating + label:before {
+    color: gold;
+}
+/*fin estilos estrellas */
+
+.btnCitas{
+    background-color: #57CC99 !important;
+    border-color: #57CC99 !important;
+    color: #fff !important;
+}
+.btnCitas:hover{
+    background-color: #34e5a6 !important;
+    border-color:#0000 !important;
+}
+
+.text-justify{
+    text-align: justify;
+}
+/*estilos corazon */
+.heart-rating {
+    display: none;
+  }
+  
+  .heart-label {
+    font-size: 0;
+    cursor: pointer;
+  }
+  
+  .heart-label i {
+    font-size: 30px;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  
+  .heart-rating:checked + .heart-label i {
+    color: #57CC99;
+  }
+  
+  .heart-label i {
+    color: rgb(0, 0, 0); 
+  }
+
+  .custom-title{
+    color: #109292;
+    font-weight: bold;
+  }
+
+  .custom-title-location {
+    color: #39a3a3; 
+    font-weight: bold;
+  }
+/*fin estilos corazon */

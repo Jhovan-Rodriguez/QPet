@@ -9,7 +9,7 @@
 @endsection
 
 @section('contenido')
-<div class="card mb-3" style="">
+<div class="border border-dark card mb-3" style="">
   <div class="row g-0">
     <div class="col-md-2"></div>
     <div class="col-md-4 mt-xl-5">

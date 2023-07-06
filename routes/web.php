@@ -24,9 +24,27 @@ Route::get('/', function () {
     return view('Home');
 });
 
+
 Route::get('/veterinarias', function () {
+    return view('veterinarias.veterinarias');
+})->name('vet');
+
+Route::get('/miVeterinaria', function () {
     return view('veterinarias.veterinaria');
-});
+})->name('miVet');
+
+Route::get('/adopcion', function () {
+    return view('adopcion.adopcion');
+})->name('adopcion');
+
+Route::get('/cuidador', function () {
+    return view('asociados.cuidador');
+})->name('cuidador');
+
+Route::get('/solicitar', function () {
+    return view('asociados.solicitarCuidador');
+})->name('solicitar');
+
 
 //Ruta para el dashboard
 Route::get('/dashboard',[PostController::class,'index'])->name('post.index');
@@ -50,19 +68,6 @@ Route::post('/registrarUsuario',[RegisterController::class,'create'])->name('usu
 //Ruta para la vista de registro de veterinaria
 Route::get('/registroVeterinario',[RegisterController::class,'registrarVeterinario'])->name('register.veterinario');
 
-
-
-Route::get('/veterinarias', function () {
-    return view('veterinarias.veterinarias');
-});
-
-
-Route::get('/veterinaria', function () {
-    return view('veterinarias.veterinaria');
-});
-
-
 Route::get('/mascotas',[MascotaController::class,'index'])->name('mascotas.index');
 Route::get('/mascotas/create', [MascotaController::class, 'create'])->name('mascotas.create');
 Route::post('/mascotas', [MascotaController::class,'store'])->name('mascotas.store');
-
