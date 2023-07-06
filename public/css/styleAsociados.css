@@ -1,0 +1,46 @@
+h1{
+    color: #38A3A5;
+}
+
+.banner{
+    width: 75%;
+}
+
+.container-banner{
+    display: flex;
+    justify-content:center;
+}
+
+.paseo{
+    background-color: #653855;
+    color: #fff;
+}
+
+.paseo h2{
+    color: #fff;
+}
+
+.bano{
+    background-color: #FF6164;
+}
+
+.bano h2{
+    color: #fff;
+}
+
+.img-paseo{
+    position: relative;
+    z-index: 1;
+    right: 15px;
+    top: 25px;
+}
+
+
+.img-bano{
+    width: 200px;
+    position: relative;
+    z-index: 1;
+    right: 15px;
+    top: 25px;
+}
+
