@@ -62,10 +62,7 @@ Route::get('/veterinaria', function () {
 });
 
 
-Route::get('/mascotas', function () {
-    return view('mascotas.mismascotas');
-});
-
+Route::get('/mascotas',[MascotaController::class,'index'])->name('mascotas.index');
 Route::get('/mascotas/create', [MascotaController::class, 'create'])->name('mascotas.create');
 Route::post('/mascotas', [MascotaController::class,'store'])->name('mascotas.store');
 
