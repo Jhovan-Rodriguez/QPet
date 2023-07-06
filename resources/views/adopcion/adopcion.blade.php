@@ -6,7 +6,27 @@
 
 @section('contenido')
     <div class="conatiner-fluid content-inner mt-5 py-0">
-        <div class="row">
+
+        <div class="row my-3 ">
+            <div class="col d-flex justify-content-between">
+                <form class="d-flex">
+                    <input class="border border-3 border-top-0 border-start-0 border-end-0 text-center  " type="search" placeholder="  Buscar" aria-label="Search" style="outline: none;">
+                    <button type="button" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                            <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"></path>
+                            <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"></path>
+                        </svg>
+                      </button>
+                </form>
+
+                <div class="d-flex">
+                    <button class="btn btn-primary me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Filtrar</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Ordenar</button>
+                </div>
+        </div>
+        
+
+        <div class="row mt-5 p-0">
             <div class="col-lg-6">
                 <div class="profile-content tab-content">
                     <div id="profile-feed" class="tab-pane fade active show">
