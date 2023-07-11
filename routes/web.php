@@ -2,12 +2,13 @@
 
 
 
-use App\Http\Controllers\MascotaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\MascotaController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RegisterVeterinariasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +68,8 @@ Route::post('/registrarUsuario',[RegisterController::class,'create'])->name('usu
 
 //Ruta para la vista de registro de veterinaria
 Route::get('/registroVeterinario',[RegisterController::class,'registrarVeterinario'])->name('register.veterinario');
+//Ruta para registrar las veterinarias en la base de datos
+Route::post('/registroVeterinario',[RegisterVeterinariasController::class,'store']);
 
 Route::get('/mascotas',[MascotaController::class,'index'])->name('mascotas.index');
 Route::get('/mascotas/create', [MascotaController::class, 'create'])->name('mascotas.create');
