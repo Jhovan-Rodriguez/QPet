@@ -1,7 +1,6 @@
 <?php
 
-
-
+use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\MascotaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -71,3 +70,9 @@ Route::get('/registroVeterinario',[RegisterController::class,'registrarVeterinar
 Route::get('/mascotas',[MascotaController::class,'index'])->name('mascotas.index');
 Route::get('/mascotas/create', [MascotaController::class, 'create'])->name('mascotas.create');
 Route::post('/mascotas', [MascotaController::class,'store'])->name('mascotas.store');
+Route::get('/mascotas/{mascota}/edit', [MascotaController::class, 'edit'])->name('mascotas.edit');
+Route::put('/mascotas/{mascota}/update', [MascotaController::class, 'update'])->name('mascotas.update');
+Route::delete('/mascotas/{mascota}', [MascotaController::class, 'destroy'])->name('mascotas.destroy');
+
+// Almacena la imagen subida
+Route::post('/imagenes',[ImagenController::class, 'store'])->name('imagenes.store');

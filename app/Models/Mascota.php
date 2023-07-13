@@ -19,6 +19,7 @@ class Mascota extends Model
         'peso',
         'descripcion',
         'adopcion',
-        'users_id'
+        'users_id',
+        'image'
     ];
 }

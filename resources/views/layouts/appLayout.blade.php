@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>QPet | @yield('titulo')</title>
 
+    @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('img/logos/LogoQpet.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{asset('css/libs.min.css')}}">

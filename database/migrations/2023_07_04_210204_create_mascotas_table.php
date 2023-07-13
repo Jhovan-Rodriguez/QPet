@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('sexo');
             $table->integer('altura');
             $table->integer('peso');
+            $table->string('image');
             $table->string('descripcion');
             $table->tinyInteger('adopcion');
             $table->foreignId('users_id')->constrained()->onDelete('cascade');

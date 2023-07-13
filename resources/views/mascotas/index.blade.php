@@ -2,6 +2,7 @@
 
 @section('estilos')
     <link rel="stylesheet" href="{{asset('css/styleDashboard.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styleVets.css')}}">
 @endsection
 
 @section('titulo')
@@ -18,45 +19,40 @@
         </ol>
       </nav>
     </div><!-- End Page Title -->
-
-  <section class="section">
-    <div id="carouselExample" class="carousel slide" style="hwight:20%">
+    
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row row-cols-1 row-cols-md-3 g-4 m-3 ">
-            <div class="col">
-                <div class="card card-v" >
-                    <img src="{{asset('img/pets/bruno.jpg')}}" class="mw-50 card-img-top" alt="..." height="250">
-                    
-                </div>
+        @if ($mascotas->count())
+          @foreach ($mascotas as $index =>  $mascota)
+          @if ($index == 0)
+          <div class="carousel-item active ">          
+          @else
+          <div class="carousel-item">
+          @endif
+    
+            <div class="row">
+              <div class="col"></div>
+              <div class="w-50 col">
+                <a href="{{ route('mascotas.edit', $mascota) }}" class="card card-v" >
+                  <img src="{{asset('uploads/'.$mascota->image)}}" class="rounded card-img-top" style="border-radius: 30px;">
+                    <p class="position-absolute bottom-0 start-0 m-4 fs-4 fw-bold text-light">{{$mascota->name}}</p>
+                </a>
             </div>
-            <div class="col">
-                <div class="card card-v" >
-                    <img src="{{asset('img/pets/dante.jpeg')}}" class="card-img-top" alt="..." height="250">
-                    
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-v" >
-                    <img src="{{asset('img/pets/bruno.jpg')}}" class="card-img-top" alt="..." height="250">
-                    
-                </div>
+            <div class="col"></div>
             </div>
           </div>
-        </div>
-        
+          @endforeach  
+        @endif
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="custom-carousel-control-icon" aria-hidden="true">&lt;</span>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="custom-carousel-control-icon" aria-hidden="true">&gt;</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-       </button>
+      </button>
     </div>
-    </section>
-
 
 
   <section class="section">
@@ -79,111 +75,48 @@
 </section>
   
   <div class="row">
+    @if ($mascotas->count())
+    @foreach ($mascotas as $mascota)
     <div class="col-md-6 col-lg-6">
       <div style="position: relative; display:inline-block; margin-top:25px; margin-left:20px;">
         <div class="card veterinaria" style="border-radius: 30px;">
           <div class="card-body">
             <div class="row">
               <div class="col-4">
-                <img src="{{asset('img/pets/bruno.jpg')}}" alt="Imagen" class="img-fluid square-image" style="border-radius: 30px;">
+                <img src="{{asset('uploads/'.$mascota->image)}}" alt="Imagen" class="img-fluid square-image" style="border-radius: 30px;">
               </div>
               <div class="col-4">
                 <div class="mb-4">
                   <div class="d-flex justify-content-center flex-wrap">
-                    <h2 class="mb-2">Bruno</h2>
+                    <h2 class="mb-2">{{ $mascota->name }}</h2>
                   </div>
                 </div>
-                <div class="d-grid gap">
-                  <h6>Raza:</h6>
-                  <h6>Edad:</h6>
-                  <h6>Sexo:</h6>
-                </div>
-                
-                
+                <ul class="list-unstyled">
+                  <li><p class="text-light text-decoration-none">Raza: {{ $mascota->raza }}</p></li>
+                  <li><p class="text-light">Edad: {{ $mascota->fecha_nacimiento }}</p></li>
+                  <li><p class="text-light">Sexo: {{ $mascota->sexo }}</p></li>
+                </ul>
               </div>
+              <a href="{{ route('mascotas.edit',$mascota)}}">
+                <div class="circ" style="display: flex; justify-content: end;">
 
-              <div class="circ" style="display: flex; justify-content: end;">
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-                <div style="height: 10px;width: 10px;border-radius: 50%;"></div>
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-                <div style="height: 10px;width: 10px;border-radius: 50%;"></div>
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-              </div>
+                  <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
+                  <div style="height: 10px;width: 10px;border-radius: 50%;"></div>
+                  <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
+                  <div style="height: 10px;width: 10px;border-radius: 50%;"></div>
+                  <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
+                </div>
+              </a>  
 
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="col-md-6 col-lg-6">
-      <div style="position: relative; display:inline-block; margin-top:25px; margin-left:20px;">
-        <div class="card veterinaria" style="border-radius: 30px;">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-4" >
-                <img src="{{asset('img/pets/bruno.jpg')}}" alt="Imagen" class="img-fluid square-image" style="border-radius: 30px;">
-              </div>
-              <div class="col-4">
-                <div class="mb-4">
-                  <div class="d-flex justify-content-center flex-wrap">
-                    <h2 class="mb-2">Bruno</h2>
-                  </div>
-                </div>
-                <div class="d-grid gap">
-                  <h6>Raza:</h6>
-                  <h6>Edad:</h6>
-                  <h6>Sexo:</h6>
-                </div>
-              </div>
-              <div class="circ" style="display: flex; justify-content: end;">
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-                <div style="height: 10px;width: 10px;border-radius: 50%;"></div>
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-                <div style="height: 10px;width: 10px;border-radius: 50%;"></div>
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    @endforeach
+    @endif
   </div>
 
-  <div class="row">
-    <div class="col-md-6 col-lg-6">
-      <div style="position: relative; display:inline-block; margin-top:25px; margin-left:20px;">
-        <div class="card veterinaria" style="border-radius: 30px;">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-4">
-                <img src="{{asset('img/pets/dante.jpeg')}}" alt="Imagen" class="img-fluid square-image" style="border-radius: 30px;">
-              </div>
-              <div class="col-4">
-                <div class="mb-4">
-                  <div class="d-flex justify-content-center flex-wrap">
-                    <h2 class="mb-2">Chui</h2>
-                  </div>
-                </div>
-                <div class="d-grid gap" >
-                  <h6>Raza:</h6>
-                  <h6>Edad:</h6>
-                  <h6>Sexo:</h6>
-                </div>
-              </div>
-              <div class="circ" style="display: flex; justify-content: end;">
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-                <div style="height: 10px;width: 10px;border-radius: 50%;"></div>
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-                <div style="height: 10px;width: 10px;border-radius: 50%;"></div>
-                <div style="background-color: white;height: 20px;width: 20px;border-radius: 50%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <br><br>
   <hr style="border: 3px solid #22577A;">
