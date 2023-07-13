@@ -10,7 +10,7 @@ class MascotaController extends Controller
 {
     public function index()
     {
-        $mascotas = Mascota::all();
+        $mascotas = Mascota::where('users_id',auth()->user()->id)->get();
 
         return view('mascotas.index',[
             'mascotas' => $mascotas
