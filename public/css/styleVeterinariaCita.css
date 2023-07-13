@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "ChelseaMarket-Regular";
+    src: url("../fonts/chelsea_market/ChelseaMarket-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Muli-Regular";
+    src: url("../fonts/muli/Muli-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Muli-SemiBold";
+    src: url("../fonts/muli/Muli-SemiBold.ttf");
+}
+h2,h3{
+    color: #049291;
+    
+}
+
+.inputBox {
+    position: relative;
+    
+    display: inline-block;
+    width: 70%;
+    
+    justify-items: right;
+    justify-content: center;
+    text-align: center;
+}
+.selectvet {
+    
+    
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    -moz-padding-start: calc(1rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6f6c6f;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+  
+.inputBox input, textarea{
+    
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    -moz-padding-start: calc(1rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6f6c6f;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+  
+.inputBox input::placeholder{
+    color: #000;
+}
+
+
+.inputBox span {
+    margin-top: 3px;
+    position: absolute;
+    left: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 3px;
+    border-radius: 8px;
+    transform: translateX(25px) translateY(-19px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #fff;
+    letter-spacing: 0.2em;
+    color: #049291;
+    border: 2px;
+}
+
+.bg-color {
+    background-color: #049291;
+    height: 100%;
+}
+
+
+
+.form{
+    justify-content: center;
+    text-align: center;
+}
+
+/* .overlay-image {
+    position: relative;
+    background-image: url({{ asset('img/imagen.png') }});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+  
+.overlay-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(4, 146, 145, 0.5); /* Cambia los valores RGB y el nivel de opacidad según tus necesidades */
+  }
+  
+.btnCitas{
+    background-color: rgba(4, 146, 145, 0.5) !important;
+    border-color: rgba(4, 146, 145, 0.5)!important;
+    color: #fff !important;
+}
+.btnCitas:hover{
+    background-color: rgba(4, 146, 145, 0.5) !important;
+    border-color:#0000 !important;
+}

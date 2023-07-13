@@ -30,6 +30,10 @@ Route::get('/veterinarias', function () {
     return view('veterinarias.veterinarias');
 })->name('vet');
 
+Route::get('/veterinarias/cita', function () {
+    return view('veterinarias.agendarCita');
+})->name('vet.cita');
+
 Route::get('/miVeterinaria', function () {
     return view('veterinarias.veterinaria');
 })->name('miVet');
