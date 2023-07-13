@@ -62,7 +62,7 @@
                         <input type="radio" id="1-star-rating" name="star-rating" value="1" class="star-rating">
                         <label for="1-star-rating"></label>
                     </div>
-                    <button type="button" class="btnCitas btn btn-success m-1" style="width:100%">Cita</button>
+                    <a type="button" href="{{ route('vet.cita') }}" class="btnCitas btn btn-success m-1" style="width:100%">Cita</a>
 
                 </div>
                 <div class="col-7">

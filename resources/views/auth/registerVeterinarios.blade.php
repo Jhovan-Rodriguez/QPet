@@ -52,21 +52,22 @@
                 </li>
             </ul>
             <!-- Step Wise Form Content -->
-            <form action="#" class="signin-form " name="userAccountSetupForm" enctype="multipart/form-data"
+            <form action="{{route('register.veterinario')}}" class="signin-form "
                 method="POST">
+                @csrf
                 <!-- Step 1 Content -->
                 <section id="step-1" class="form-step">
                     <!-- Step 1 input fields -->
                     <div class="row g-4">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Username">
+                                <input name="username" type="text" placeholder="Username">
                                 <span>Username</span>
                             </div>
                         </div>
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Nombre">
+                                <input name="nombre" type="text"  placeholder="Nombre">
                                 <span>Nombre</span>
                             </div>
                         </div>
@@ -75,14 +76,14 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Apellido paterno">
+                                <input name="apellido_p" type="text"placeholder="Apellido paterno">
                                 <span>Apellido Paterno</span>
                             </div>
                         </div>
 
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Apellido materno">
+                                <input name="apellido_m" type="text"  placeholder="Apellido materno">
                                 <span>Apellido materno</span>
                             </div>
                         </div>
@@ -90,7 +91,7 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <select>
+                                <select name="genero">
                                     <option selected>Seleccione</option>
                                     <option value="1">Masculino</option>
                                     <option value="2">Femenino</option>
@@ -102,7 +103,7 @@
 
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="date" required="required" placeholder="Apellido materno">
+                                <input name="fecha_nac" type="date" placeholder="Apellido materno">
                                 <span>Fecha de nacimiento</span>
                             </div>
                         </div>
@@ -111,15 +112,29 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="tel" required="required" placeholder="Teléfono">
+                                <input name="telefono" type="tel"placeholder="Teléfono">
                                 <span>Teléfono</span>
                             </div>
                         </div>
 
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="email" required="required" placeholder="Email">
+                                <input name="email" type="email" placeholder="Email">
                                 <span>Email</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="inputBox">
+                                <input name="password" type="password" placeholder="Contraseña">
+                                <span>Contraseña</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="inputBox">
+                                <input name="password_confirmation" type="password" placeholder="Confirma contraseña">
+                                <span>Confirma Contraseña</span>
                             </div>
                         </div>
                     </div>
@@ -134,19 +149,19 @@
                     <div class="row g-4">
                         <div class="form-group col-12">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Nombre de la veterinaria">
+                                <input name="nombre_vet" type="text" placeholder="Nombre de la veterinaria">
                                 <span>Nombre</span>
                             </div>
                         </div>
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Colonia">
+                                <input name="colonia" type="text" placeholder="Colonia">
                                 <span>Colonia</span>
                             </div>
                         </div>
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Calle">
+                                <input name="calle" type="text" placeholder="Calle">
                                 <span>Calle</span>
                             </div>
                         </div>
@@ -155,14 +170,14 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="number" required="required" placeholder="Código postal">
+                                <input name="cp" type="number" placeholder="Código postal">
                                 <span>Código postal</span>
                             </div>
                         </div>
 
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="number" required="required" placeholder="Apellido materno">
+                                <input name="num_exterior" type="number" placeholder="Número exterior">
                                 <span>Num. exterior</span>
                             </div>
                         </div>
@@ -170,7 +185,7 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <select>
+                                <select name="estado">
                                     <option selected>Seleccione</option>
                                     <option value="DIF">Distrito Federal</option>
                                     <option value="AGS">Aguascalientes</option>
@@ -211,7 +226,7 @@
 
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <select>
+                                <select name="ciudad">
                                     <option selected>Seleccione</option>
                                     <option value="DIF">Distrito Federal</option>
                                     <option value="AGS">Aguascalientes</option>
@@ -254,14 +269,14 @@
                     <div class="row" style="margin-bottom: 20px;">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="tel" required="required" placeholder="Teléfono">
+                                <input name="tel_vet" type="tel"  placeholder="Teléfono">
                                 <span>Teléfono</span>
                             </div>
                         </div>
 
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="email" required="required" placeholder="Email">
+                                <input name="email_vet" type="email"  placeholder="Email">
                                 <span>Email</span>
                             </div>
                         </div>
@@ -271,20 +286,20 @@
                     <div class="row">
                         <div class="form-group col-4">
                             <div class="inputBox">
-                                <input type="time" required="required" placeholder="Teléfono">
+                                <input name="lunes_viernes" type="time" placeholder="">
                                 <span>Lunes a viernes</span>
                             </div>
                         </div>
 
                         <div class="form-group col-4">
                             <div class="inputBox">
-                                <input type="time" required="required" placeholder="Email">
+                                <input name="sabado" type="time" placeholder="Email">
                                 <span>Sábado</span>
                             </div>
                         </div>
                         <div class="form-group col-4">
                             <div class="inputBox">
-                                <input type="time" required="required" placeholder="Email">
+                                <input name="domingo" type="time" placeholder="Email">
                                 <span>Domingo</span>
                             </div>
                         </div>
@@ -300,7 +315,7 @@
                     <div class="row">
                         <div class="form-group col-12">
                             <div class="inputBox">
-                                <input type="text" required="required" placeholder="Nombre del titular de tarjeta">
+                                <input type="text" placeholder="Nombre del titular de tarjeta">
                                 <span>Nombre de titular</span>
                             </div>
                         </div>
@@ -308,7 +323,7 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="number" required="required" placeholder="Número de tarjeta">
+                                <input type="number" placeholder="Número de tarjeta">
                                 <span>Número de tarjeta</span>
                             </div>
                         </div>
@@ -326,13 +341,13 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="month" required="required" placeholder="Fecha de expiración de tarjeta">
+                                <input type="month" placeholder="Fecha de expiración de tarjeta">
                                 <span>Fecha de expiración</span>
                             </div>
                         </div>
                         <div class="form-group col-6">
                             <div class="inputBox">
-                                <input type="number" required="required" placeholder="CVV de tarjeta">
+                                <input type="number" placeholder="CVV de tarjeta">
                                 <span>CVV</span>
                             </div>
                         </div>
