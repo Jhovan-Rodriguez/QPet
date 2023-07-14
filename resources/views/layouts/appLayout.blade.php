@@ -97,7 +97,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ route('vet') }}">
+                            <a class="nav-link" aria-current="page" href="{{ route('veterinarias.index') }}">
                                 <i class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-building-hospital" width="24"

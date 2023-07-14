@@ -1,12 +1,13 @@
 <?php
 
-use App\Http\Controllers\ImagenController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\MascotaController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\VeterinariasController;
 use App\Http\Controllers\RegisterVeterinariasController;
 
 /*
@@ -25,9 +26,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/veterinarias', function () {
-    return view('veterinarias.veterinarias');
-})->name('vet');
 
 Route::get('/veterinarias/cita', function () {
     return view('veterinarias.agendarCita');
@@ -80,6 +78,10 @@ Route::post('/mascotas', [MascotaController::class,'store'])->name('mascotas.sto
 Route::get('/mascotas/{mascota}/edit', [MascotaController::class, 'edit'])->name('mascotas.edit');
 Route::put('/mascotas/{mascota}/update', [MascotaController::class, 'update'])->name('mascotas.update');
 Route::delete('/mascotas/{mascota}', [MascotaController::class, 'destroy'])->name('mascotas.destroy');
+
+//Ruta para la vista de veterinarias
+Route::get('/veterinarias',[VeterinariasController::class,'index'])->name('veterinarias.index');
+
 
 // Almacena la imagen subida
 Route::post('/imagenes',[ImagenController::class, 'store'])->name('imagenes.store');
